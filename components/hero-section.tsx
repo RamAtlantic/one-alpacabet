@@ -221,7 +221,7 @@ export function HeroSection() {
                         </motion.button>
                       </div>
                       <motion.button
-                        onClick={() => (window.location.href = process.env.NEXT_PUBLIC_REGISTER_URL || "#")}
+                        onClick={handleWhatsAppClick}
                         disabled={loadingStates["register"]}
                         className="group relative bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-400 hover:to-yellow-400 disabled:from-green-600 disabled:to-yellow-600 text-black font-black py-3 px-6 text-lg rounded-xl shadow-2xl overflow-hidden min-w-[200px] min-h-[50px] flex items-center justify-center gap-2"
                         whileHover={{
