@@ -8,6 +8,13 @@ import axios from "axios"
 import { motion, AnimatePresence } from "framer-motion"
 import { useIsMobile } from "@/hooks/use-mobile"
 
+
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 export function HeroSection() {
   
   const { sendTrackingData } = useUserTracking()
@@ -51,6 +58,11 @@ export function HeroSection() {
         console.warn("Error enviando datos de tracking:", error)
       }
       const whatsappUrl = "https://wa.me/5493416633244?text=Buenas,%20Me%20gustaria%20crear%20un%20usuario%20en%20Alpaca"
+      window.fbq("track", "Lead", {
+        content_name: "Botón CTA",
+        value: 0,
+        currency: "USD",
+      });
       window.location.href = whatsappUrl
     } catch (error) {
       console.error("Error en el proceso:", error)
