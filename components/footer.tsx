@@ -28,7 +28,7 @@ export function Footer() {
           {/* Copyright */}
           <div className="flex items-center gap-1">
             <Copyright className="w-3 h-3" />
-            <span>2024 AlpacaBet.co</span>
+            <span>2025 AlpacaBet.co</span>
           </div>
         </div>
 

@@ -152,7 +152,7 @@ export function HeroSection() {
                     <img
                       src="https://whitewallets.s3.amazonaws.com/alpacabet/commons/logo-fondo-oscuro-horizontal1736361556.png"
                       alt=""
-                      className={`w-full h-auto ${isMobile ? "max-w-[280px]" : ""}`}
+                      className={`w-full h-auto ${isMobile ? "max-w-[280px]" : "max-w-[400px]"}`}
                     />
                   </div>
                   <motion.div className="max-w-4xl mx-auto">
@@ -162,7 +162,7 @@ export function HeroSection() {
                       Tu lugar de confianza
                     </motion.p>
                     <motion.div
-                      className={`grid gap-3 md:gap-6 mt-4 md:mt-8 ${isMobile ? "grid-cols-2" : "grid-cols-1 md:grid-cols-2"}`}
+                      className={`grid gap-3 md:gap-6 mt-4 md:mt-8 ${isMobile ? "grid-cols-2" : "grid-cols-3 md:grid-cols-3"}`}
                     >
                       <motion.div
                         className={`bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl ${isMobile ? "p-3" : "p-6"}`}
@@ -170,13 +170,44 @@ export function HeroSection() {
                         <Clock className={`text-[#23D366] mx-auto mb-2 md:mb-3 ${isMobile ? "w-6 h-6" : "w-8 h-8"}`} />
                         <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Atención 24hs. Todos los dias</p>
                       </motion.div>
+                      {/* Botón CTA centrado en la versión de escritorio */}
+                      {!isMobile && (
+                        <motion.button
+                          onClick={handleWhatsAppClick}
+                          disabled={loadingStates["register"]}
+                          className="group relative bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-400 hover:to-yellow-400 disabled:from-green-600 disabled:to-yellow-600 text-black font-black py-3 px-6 text-lg rounded-xl shadow-2xl overflow-hidden min-w-[200px] min-h-[50px] flex items-center justify-center gap-2"
+                          whileHover={{
+                            scale: 1.05,
+                            boxShadow: "0 25px 50px -12px rgba(234, 179, 8, 0.5)",
+                          }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <motion.div
+                            className="absolute inset-0 bg-gradient-to-r from-green-400 to-yellow-400"
+                            initial={{ x: "-100%" }}
+                            whileHover={{ x: "0%" }}
+                            transition={{ duration: 0.3 }}
+                          />
+                          <div className="relative flex items-center gap-2">
+                            {loadingStates["register"] ? (
+                              <>
+                                <CircularLoader />
+                                <span>CONECTANDO...</span>
+                              </>
+                            ) : (
+                              <>
+                                <Play className="w-5 h-5" />
+                                <span>Comenzar YA!</span>
+                              </>
+                            )}
+                          </div>
+                        </motion.button>
+                      )}
                       <motion.div
                         className={`bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl ${isMobile ? "p-3" : "p-6"}`}
                       >
                         <Gift className={`text-[#F01A4A] mx-auto mb-2 md:mb-3 ${isMobile ? "w-6 h-6" : "w-8 h-8"}`} />
-                        <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>
-                          Extra de bienvenida
-                        </p>
+                        <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Extra de bienvenida</p>
                       </motion.div>
                     </motion.div>
                   </motion.div>
