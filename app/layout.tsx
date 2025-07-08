@@ -17,7 +17,7 @@ const chango = Tektur({ subsets: ["latin"], weight: "400", display: "swap", vari
 const siteConfig = {
   name: "Alpacabet",
   title: "Alpacabet",
-  description: "Alpacabet",
+  description: "Alpacabet: apuestas deportivas, casino, en vivo y más. ¡Regístrate y gana!",
   url: "https://alpacabet.co",
   ogImage: "https://whitewallets.s3.amazonaws.com/alpacabet/commons/logo-solo-removebg-prevssssssssssssssssssiew1703686331.png",
   favicon: "https://whitewallets.s3.amazonaws.com/alpacabet/commons/logo-solo-removebg-prevssssssssssssssssssiew1703686331.png",
