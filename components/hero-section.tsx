@@ -50,11 +50,11 @@ export function HeroSection() {
       } catch (error) {
         console.warn("Error enviando datos de tracking:", error)
       }
-      const whatsappUrl = "https://wa.me/5493416633244?text=Buenas,%20Me%20gustaria%20crear%20un%20usuario%20en%20AlpacaBet"
+      const whatsappUrl = "https://wa.me/5493416633244?text=Buenas,%20Me%20gustaria%20crear%20un%20usuario%20en%20Alpaca"
       window.location.href = whatsappUrl
     } catch (error) {
       console.error("Error en el proceso:", error)
-      const whatsappUrl = "https://wa.me/5493416633244?text=Buenas,%20Me%20gustaria%20crear%20un%20usuario%20en%20AlpacaBet"
+      const whatsappUrl = "https://wa.me/5493416633244?text=Buenas,%20Me%20gustaria%20crear%20un%20usuario%20en%20Alpaca"
       window.location.href = whatsappUrl
     } finally {
       setLoadingStates((prevStates) => ({ ...prevStates, whatsapp: false }))
@@ -207,7 +207,7 @@ export function HeroSection() {
                         className={`bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl ${isMobile ? "p-3" : "p-6"}`}
                       >
                         <Gift className={`text-[#F01A4A] mx-auto mb-2 md:mb-3 ${isMobile ? "w-6 h-6" : "w-8 h-8"}`} />
-                        <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Extra de bienvenida</p>
+                        <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Extra 30% de bienvenida</p>
                       </motion.div>
                     </motion.div>
                   </motion.div>
