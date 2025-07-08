@@ -15,12 +15,12 @@ const chango = Tektur({ subsets: ["latin"], weight: "400", display: "swap", vari
 
 
 const siteConfig = {
-  name: "MooneyMaker",
-  title: "MooneyMaker - Juegos y Entretenimiento",
-  description: "Descubrí una nueva forma de divertirte con MooneyMaker. Juegos, premios y emoción.",
-  url: "https://mooneymaker.co", // Reemplaza con tu URL de producción
-  ogImage: "https://mooneymaker.co/frontend/CSOFTV7/img/logo%20mooney.png", // URL del logo
-  favicon: "https://mooneymaker.co/frontend/CSOFTV7/img/logo%20mooney.png", // URL del logo para favicon
+  name: "Alpacabet",
+  title: "Alpacabet",
+  description: "Alpacabet",
+  url: "https://alpacabet.co",
+  ogImage: "https://whitewallets.s3.amazonaws.com/alpacabet/commons/logo-solo-removebg-prevssssssssssssssssssiew1703686331.png",
+  favicon: "https://whitewallets.s3.amazonaws.com/alpacabet/commons/logo-solo-removebg-prevssssssssssssssssssiew1703686331.png",
 };
 
 export const metadata: Metadata = {
@@ -43,16 +43,16 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     url: siteConfig.url,
-    siteName: siteConfig.name,
+    siteName: "Operado por Alpacabet",
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200, // Ancho deseado para la imagen de vista previa (ajusta si es necesario)
-        height: 630, // Alto deseado para la imagen de vista previa (ajusta si es necesario)
+        width: 1200,
+        height: 630,
         alt: siteConfig.name,
       },
     ],
-    locale: 'es_AR', // Asumiendo español de Argentina
+    locale: 'es_AR',
     type: 'website',
   },
 
@@ -62,7 +62,6 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    // Puedes añadir @creator si tienes un handle de Twitter
   },
   
   // Otros metadatos útiles
@@ -77,8 +76,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  // Alternativa al generator, si no quieres el de v0.dev
-  // generator: siteConfig.name, 
 };
 
 export default function RootLayout({
